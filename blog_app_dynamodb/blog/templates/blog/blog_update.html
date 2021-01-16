@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<br><br>
+<div class="container">
+    <h1>Edit Post</h1>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Title</p>
+        <input type="text" class="form-control" name="title" value="{{title}}">
+        <br>
+        <p>Content</p>
+        <textarea class="form-control" name="body">{{content}}</textarea>
+        <br>
+        <button type=" submit" class="btn btn-success">Save Post</button>
+        <input type="submit" onclick="window.location='{% url 'blog:all' %}' ; return false;" value="Cancel">
+    </form>
+</div>
+{% endblock %}
