@@ -22,7 +22,7 @@ class dynamodbcrud:
             'dynamodb',
             aws_access_key_id='your_aws_access_key_id=',
             aws_secret_access_key='your_aws_secret_access_key',
-            region_name='your_reion_namr',
+            region_name='your_region_name',
         ).Table('your_dynamodb_table_name')
 
     def db_readall(self):
